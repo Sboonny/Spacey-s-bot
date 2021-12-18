@@ -3,8 +3,10 @@ const { executionAsyncResource } = require('async_hooks');
 const { skips } = require('debug');
 
 const Discord = require("discord.js");
-const { prefix, token } = require("./config.json");
 const ytdl = require("ytdl-core");
+
+const token = process.env.BOT_TOKEN
+const prefix = process.env.PREFIX
 
 const client = new Discord.Client();
 
